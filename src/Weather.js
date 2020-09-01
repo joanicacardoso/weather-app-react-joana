@@ -52,7 +52,7 @@ export default function Weather() {
         </p>
       </div>
       <div className="Forecast">
-        <div className="row justify-content-between">
+        <div className="row justify-content-between no-gutters">
           <div className="col-2">
             <p>10:00</p>
             <img src={img} alt="Sunny" height="30px" width="30px" />

@@ -8,3 +8,8 @@
   border: 1px solid #d86141;
   padding: 20px 10px;
 }
+
+.App footer {
+  margin-top: 10px;
+  color: #000000;
+}
