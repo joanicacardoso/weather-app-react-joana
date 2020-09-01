@@ -1,2 +1,39 @@
-.Weather {
+.Weather h1 {
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+.Weather .Conditions {
+  text-align: right;
+}
+
+.Weather a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.Weather a:hover {
+  font-weight: bolder;
+}
+
+.Weather p {
+  margin-top: 10px;
+  line-height: 15px;
+}
+
+.Weather .Current {
+  text-align: center;
+}
+
+.Weather img {
+  margin-bottom: 10px;
+}
+
+.Weather .Units {
+  text-align: right;
+}
+
+.Weather .Forecast {
+  text-align: center;
+  margin: 0 10px 0 10px;
 }
