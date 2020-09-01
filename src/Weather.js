@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormatedDate from "./FormatedDate";
 import "./Weather.css";
 import img from "./img/01d.svg";
 
@@ -7,8 +8,6 @@ export default function Weather(props) {
   const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
-    console.log(response.data);
-
     setWeatherData({
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -16,8 +15,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       icon: "./img/01d.svg",
-      date: "Monday, August 24",
-      time: "18:00",
+      date: new Date(response.data.dt * 1000),
     });
     setReady(true);
   }
@@ -28,7 +26,7 @@ export default function Weather(props) {
         <div className=" row justify-content-between no-gutters">
           <div className="col-9">
             <form className="form-inline">
-              <div classname="form-group">
+              <div className="form-group">
                 <input
                   type="text"
                   className="form-control form-control-sm input-sm"
@@ -49,11 +47,8 @@ export default function Weather(props) {
         </div>
         <div className="row no-gutter">
           <div className="col-10">
-            <p>
-              Last updated: <br />
-              {weatherData.date} <br />
-              {weatherData.time}
-            </p>
+            Last updated:
+            <FormatedDate date={weatherData.date} />
           </div>
           <div className="col-2">
             <a href="/">O</a>
