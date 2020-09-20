@@ -18,7 +18,12 @@ export default function WeatherInfo(props) {
         </div>
       </div>
       <div className="Current">
-        <img src={props.data.icon} alt="Sunny" height="120px" width="120px" />
+        <img
+          src={props.data.icon}
+          alt={props.data.description}
+          height="120px"
+          width="120px"
+        />
         <h1>{Math.round(props.data.temperature)}º</h1>
         <h1>{props.data.city}</h1>
         <p className="text-capitalize">{props.data.description}</p>
