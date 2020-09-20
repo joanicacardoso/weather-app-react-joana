@@ -15,7 +15,7 @@ export default function Weather(props) {
       city: response.data.name,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
     });
   }
@@ -23,6 +23,7 @@ export default function Weather(props) {
   function handleSubmit(event) {
     event.preventDefaut();
     //search for a city
+    alert(city);
     search();
   }
 
@@ -43,7 +44,7 @@ export default function Weather(props) {
       <div className="Weather">
         <div className=" row justify-content-between no-gutters">
           <div className="col-9">
-            <form onSubmit={handleSubmit} className="form-inline">
+            <form className="form-inline" onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
                   type="search"
