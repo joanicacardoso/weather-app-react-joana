@@ -3,11 +3,18 @@
   text-align: center;
   line-height: 24px;
 }
+
+.Weather .Temp {
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
 .Weather .Conditions {
   text-align: right;
 }
 
-.Weather a {
+.Weather .Units a {
   color: #ffffff;
   text-decoration: none;
 }
@@ -30,7 +37,8 @@
 }
 
 .Weather .Units {
-  text-align: right;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .Weather .Forecast {

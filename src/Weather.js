@@ -61,6 +61,7 @@ export default function Weather(props) {
               </div>
             </form>
           </div>
+          <div className="Units col-3"></div>
         </div>
         <WeatherInfo data={weatherData} />
       </div>

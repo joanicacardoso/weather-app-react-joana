@@ -2,13 +2,11 @@ import React from "react";
 import img from "./img/01d.svg";
 import FormatedDate from "./FormatedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div className="Units col-3">
-        <a href="/">ºC</a> | <a href="/">ºF</a>
-      </div>
       <div className="row no-gutter">
         <div className="col-10">
           Last updated:
@@ -20,8 +18,7 @@ export default function WeatherInfo(props) {
       </div>
       <div className="Current">
         <WeatherIcon code={props.data.icon} alt={props.data.description} />
-
-        <h1>{Math.round(props.data.temperature)}º</h1>
+        <WeatherTemperature celsius={props.data.temperature} />
         <h1>{props.data.city}</h1>
         <p className="text-capitalize">{props.data.description}</p>
       </div>
