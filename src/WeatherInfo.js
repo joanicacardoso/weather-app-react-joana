@@ -9,7 +9,6 @@ export default function WeatherInfo(props) {
     <div className="WeatherInfo">
       <div className="row no-gutter">
         <div className="col-10">
-          Last updated:
           <FormatedDate date={props.data.date} />
         </div>
         <div className="col-2">
