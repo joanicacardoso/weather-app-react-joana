@@ -1,17 +1,22 @@
 .Weather h1 {
   font-size: 24px;
   text-align: center;
-  line-height: 24px;
 }
 
 .Weather .Temp {
+  padding: 5px;
   font-size: 24px;
   text-align: center;
-  line-height: 24px;
+  line-height: 32px;
 }
 
 .Weather .Conditions {
   text-align: right;
+}
+
+.Weather .Units {
+  position: relative;
+  top: -8px;
 }
 
 .Weather .Units a {
@@ -35,13 +40,4 @@
 
 .Weather img {
   margin-bottom: 10px;
-}
-
-.Weather .Units {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.Weather .Forecast {
-  text-align: center;
 }

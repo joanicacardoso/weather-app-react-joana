@@ -15,7 +15,7 @@ export default function App() {
           >
             Open-sourced code
           </a>{" "}
-          by Joana Cardoso
+          and icons by Joana Cardoso
         </footer>
       </div>
     </div>
